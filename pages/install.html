@@ -1,0 +1,27 @@
+title: Installation
+
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Installation</h1>
+
+<h4>Dependencies</h4>
+<p>I realize that these are not fun to install. My best luck has always been 
+using <code>brew</code> if you're on a Mac or just using the binaries if you're 
+on Windows. If you're using Linux then this should be relatively painless. You 
+should be able to <code>apt-get</code> or <code>yum</code> all of these.</p>
+
+<ul>
+    <li><code>matplotlib</code></li>
+    <li><code>pandas</code></li>
+    <li><code>numpy</code></li>
+    <li><code>scipy</code></li>
+    <li><code>statsmodels</code></li>
+</ul>
+
+<h4>Installing</h4>
+<p>Ok the hard part is over. Installing <code>ggplot</code> is really easy. Just use <code>pip</code>!</p> 
+
+<pre class="prettyprint">$ pip install ggplot</pre>
+
+{% endblock %}

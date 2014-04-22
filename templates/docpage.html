@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+        <h1 class="text-center"><code>{{ title }}</code></h1>
+        <img src="{{ STATIC_URL }}/img/docs/{{ title }}.png" width="150"></a>
+    </div>
+    {% block body %}{% endblock %}
+{% endblock %}

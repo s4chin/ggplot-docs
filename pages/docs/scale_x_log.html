@@ -1,0 +1,59 @@
+title: scale_x_log
+
+{% extends "docpage.html" %}
+{% block body %}
+    <div class="row">
+        <h2>Usage</h2>
+        <pre class="prettyprint">scale_x_log(name = ..., breaks = ..., labels = ..., limits = ...)</pre>
+    </div>
+
+    <div class="row">
+        <h2>Arguments</h2>
+        <table class='table table-bordered'>
+            <thead>
+                <th>Name</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>name</td>
+                    <td>Label for x axis.</td>
+                </tr>
+                <tr>
+                    <td>breaks</td>
+                    <td>Points at which x gridlines appear.</td>
+                </tr>
+                <tr>
+                    <td>labels</td>
+                    <td>Labels for x ticks.</td>
+                </tr>
+                <tr>
+                    <td>limits</td>
+                    <td>Where x axis starts/stops.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <h2>Examples</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(aes('carat', 'price'), data=diamonds) + geom_point()</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/docs/scale_x_log_example1.png">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(aes('carat', 'price'), data=diamonds) + geom_point() + scale_x_log()</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/docs/scale_x_log_example2.png">
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

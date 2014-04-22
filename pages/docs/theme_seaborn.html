@@ -1,0 +1,78 @@
+title: theme_seaborn
+
+{% extends "docpage.html" %}
+{% block body %}
+    <div class="row">
+        <h2>Usage</h2>
+        <pre class="prettyprint">theme_seaborn()</pre>
+    </div>
+
+    <div class="row">
+        <h2>Arguments</h2>
+        <table class='table table-bordered'>
+            <thead>
+                <th>Name</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>style</td>
+                    <td>Style of axis background. <code>whitegrid</code> | <code>darkgrid</code> | <code>nogrid</code> | <code>ticks</code></td>
+                </tr>
+                <tr>
+                    <td>context</td>
+                    <td>Intended context for resulting figures. <code>notebook</code> | <code>talk</code> | <code>paper</code> | <code>poster</code></td>
+                </tr>
+                <tr>
+                    <td>gridweight</td>
+                    <td> Width of the grid lines. <code>extra heavy</code> | <code>heavy</code> | <code>medium</code> | <code>light</code> | <code>None</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <h2>Examples</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(aes('carat', 'price'), data=diamonds) + geom_point() + theme_seaborn()</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/docs/theme_seaborn_example1.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(aes('carat', 'price'), data=diamonds) + geom_point() + theme_seaborn(style='darkgrid')</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/docs/theme_seaborn_example2.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(aes('carat', 'price'), data=diamonds) + geom_point() + theme_seaborn(context='poster')</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/docs/theme_seaborn_example3.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(aes('carat', 'price'), data=diamonds) + geom_point() + theme_seaborn(gridweight = 'extra heavy')</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/docs/theme_seaborn_example4.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(aes('carat', 'price'), data=diamonds) + geom_point() + theme_seaborn(style = 'nogrid')</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/docs/theme_seaborn_example5.png">
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

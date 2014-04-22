@@ -1,0 +1,56 @@
+title: scale_color_manual
+
+{% extends "docpage.html" %}
+{% block body %}
+    <div class="row">
+        <h2>Usage</h2>
+        <pre class="prettyprint">scale_color_manual({ x: 'blue', y: 'red', ... })</pre>
+    </div>
+
+    <div class="row">
+        <h2>Arguments</h2>
+        <table class='table table-bordered'>
+            <thead>
+                <th>Name</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>values</td>
+                    <td>Mapped values for colors.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <h2>Examples</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint"></pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint"></pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint"></pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
