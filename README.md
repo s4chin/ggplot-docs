@@ -1,4 +1,4 @@
-# ggplot docs
+# [ggplot docs](http://ggplot.yhathq.com/)
 
 You'll need [cactus](https://github.com/koenbok/Cactus).
 
