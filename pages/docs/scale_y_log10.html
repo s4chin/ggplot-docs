@@ -39,28 +39,12 @@ title: scale_y_log10
         <h2>Examples</h2>
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">ggplot(aes(x='carat', y='price'), data=diamonds) +\
+    geom_jitter() +\
+    scale_y_log10()</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_y_log10_example1.png">
             </div>
         </div>
     </div>

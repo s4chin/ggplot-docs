@@ -39,30 +39,38 @@ title: scale_x_reverse
         <h2>Examples</h2>
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint"># regular
+ggplot(aes(x='price'), data=diamonds) +\
+    geom_histogram()</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_x_reverse_example0.png">
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint"># reversed
+ggplot(aes(x='price'), data=diamonds) +\
+    geom_histogram() +\
+    scale_x_reverse()</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_x_reverse_example1.png">
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">ggplot(aes(x='carat', y='price'), data=diamonds) +\
+    geom_point() +\
+    scale_x_reverse()</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_x_reverse_example2.png">
             </div>
         </div>
+
     </div>
 
 {% endblock %}
