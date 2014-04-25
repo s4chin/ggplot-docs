@@ -39,28 +39,26 @@ title: scale_y_log
         <h2>Examples</h2>
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">import pandas as np
+import numpy as np
+df = pd.DataFrame({"x": np.arange(100)})
+df['y'] = df.x**2
+
+ggplot(aes(x='x', y='y'), data=df) + geom_line()</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_y_log_example0.png">
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">ggplot(aes(x='x', y='y'), data=df) +\
+    geom_line() +\
+    scale_y_log(base=2)</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_y_log_example1.png">
             </div>
         </div>
     </div>

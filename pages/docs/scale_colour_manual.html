@@ -27,28 +27,34 @@ title: scale_color_manual
         <h2>Examples</h2>
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint"> ggplot(aes(x='wt', y='mpg', colour='factor(cyl)'), data=mtcars) +\
+    geom_point() +\
+    scale_colour_manual(values=["blue", "purple", "orange"])</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_color_manual_example1.png">
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">ggplot(aes(x='price', color='cut'), data=diamonds) +\
+    geom_density() +\
+    scale_colour_manual(values=["coral", "chocolate", "cornsilk", "papayawhip", "blanchedalmond"])</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_color_manual_example2.png">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(aes(x='wt', y='mpg', colour='factor(cyl)'), data=mtcars) +\
+    geom_point() +\
+    scale_colour_manual(values=["white", "grey", "black"])</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/docs/scale_color_manual_example3.png">
             </div>
         </div>
     </div>
