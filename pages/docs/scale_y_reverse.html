@@ -39,28 +39,26 @@ title: scale_y_reverse
         <h2>Examples</h2>
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">ggplot(aes(x='carat', y='price'), data=diamonds) +\
+    geom_point() +\
+    scale_x_continuous(limits=(0,5)) +\
+scale_y_reverse(limits=(0,20000))
+    </pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_y_reverse_example1.png">
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">ggplot(aes(x='price', y='carat'), data=diamonds) +\
+    geom_point() +\
+    scale_x_continuous(limits=(0,20000))  +\
+    scale_y_reverse(name="size of diamond (carats)", limits=(0,5))</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_y_reverse_example2.png">
             </div>
         </div>
     </div>

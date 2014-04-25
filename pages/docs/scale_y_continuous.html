@@ -39,11 +39,10 @@ title: scale_y_continuous
         <h2>Examples</h2>
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint">p=ggplot(aes(x='carat', y='price'), data=diamonds) +\
+                <pre class="prettyprint">ggplot(aes(x='carat', y='price'), data=diamonds) +\
     geom_point() +\
     scale_x_continuous(limits=(0,5)) +\
-scale_y_continuous(limits=(0,20000))
-    </pre>
+scale_y_continuous(limits=(0,20000))</pre>
             </div>
             <div class="col-sm-6">
                 <img src="{{ STATIC_URL }}/img/docs/scale_y_continuous_example1.png">

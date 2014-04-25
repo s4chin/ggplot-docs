@@ -37,30 +37,35 @@ title: scale_x_date
 
     <div class="row">
         <h2>Examples</h2>
-        <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+        <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(aes(x='date', y='beef'), data=meat) +\
+    geom_point() +\
+    scale_x_date()</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_x_date_example1.png">
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">ggplot(aes(x='date', y='beef'), data=meat) +\
+    geom_point() +\
+    scale_x_date(labels = date_format("%Y-%m-%d"))</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_x_date_example2.png">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(meat, aes('date','beef')) + \
+    geom_line() + \
+    scale_x_date(labels = date_format("%Y-%m-%d"), breaks='10 years')</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/docs/scale_x_date_example3.png">
             </div>
         </div>
     </div>
