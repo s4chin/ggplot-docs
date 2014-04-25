@@ -31,30 +31,38 @@ title: scale_color_gradient2
         <h2>Examples</h2>
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">dsub = diamonds[(diamonds.x > 5) & (diamonds.x < 7.5)]
+ggplot(aes(x='x', y='y', color='abs(x - y)'), data=dsub) + \
+    geom_point() + \
+    scale_color_gradient2()</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_colour_gradient2_example1.png">
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">p = ggplot(aes(x='x', y='y', color='abs(x - y)'), data=dsub.head(1000)) + \
+    geom_point() + \
+    scale_colour_gradient2(low="steelblue", high="black")</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_colour_gradient2_example2.png">
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">ggplot(aes(x='x', y='y', color='abs(x - y)'), data=dsub.head(1000)) + \
+    geom_point() + \
+    scale_colour_gradient2(low="yellow", high="red")</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_colour_gradient2_example3.png">
             </div>
         </div>
+        
     </div>
 
 {% endblock %}
