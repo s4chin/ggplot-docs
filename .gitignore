@@ -3,3 +3,7 @@ node_modules
 
 *.swp
 config.json
+
+.DS_Store
+
+*.pyc

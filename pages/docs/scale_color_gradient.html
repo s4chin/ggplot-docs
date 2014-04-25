@@ -31,28 +31,34 @@ title: scale_color_gradient
         <h2>Examples</h2>
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">ggplot(aes(x='x', y='y', color='z'), data=diamonds.head(1000)) +\
+    geom_point() +\
+    scale_color_gradient(low='red', high='white')</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_color_gradient_example1.png">
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">ggplot(aes(x='x', y='y', color='z'), data=diamonds.head(1000)) +\
+    geom_point() +\
+    scale_color_gradient(low='#05D9F6', high='#5011D1')</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/docs/scale_color_gradient_example2.png">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(aes(x='x', y='y', color='z'), data=diamonds.head(1000)) +\
+    geom_point() +\
+    scale_color_gradient(low='#E1FA72', high='#F46FEE')</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/docs/scale_color_gradient_example3.png">
             </div>
         </div>
     </div>
