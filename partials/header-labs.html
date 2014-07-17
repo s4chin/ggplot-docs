@@ -1,0 +1,35 @@
+title: labs
+
+{% extends "docpage.html" %}
+{% block body %}
+    <div class="row">
+        <h2>Usage</h2>
+        <pre class="prettyprint">labs(x=..., y=..., title=...)</pre>
+    </div>
+
+    <div class="row">
+        <h2>Arguments</h2>
+        <table class='table table-bordered'>
+            <thead>
+                <th>Name</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>x</td>
+                    <td>Label for x axis.</td>
+                </tr>
+                <tr>
+                    <td>y</td>
+                    <td>Label for y axis.</td>
+                </tr>
+                <tr>
+                    <td>title</td>
+                    <td>Title for the graph.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+{{ EXAMPLES }}
+{% endblock %}

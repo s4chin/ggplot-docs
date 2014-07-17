@@ -40,33 +40,31 @@
         </ul>
     </div>
 
-    <div class="row">
-        <h2>Examples</h2>
+
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint">
-ggplot(mtcars,aes(x='wt',y='mpg')) + \
+                <pre class="prettyprint">ggplot(mtcars,aes(x='wt',y='mpg')) + \
     geom_point() + \
     geom_abline(intercept=20)
 </pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/geom_abline/example1.png">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_abline.py_example_0.png">
             </div>
         </div>
+        
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint">
-ggplot(mtcars,aes(x='wt',y='mpg')) + \
+                <pre class="prettyprint">ggplot(mtcars,aes(x='wt',y='mpg')) + \
     geom_point() + \
     geom_abline(intercept=37,slope=-5,
                 colour="red",size=10)
-                </pre>
+</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/geom_abline/example2.png">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_abline.py_example_1.png">
             </div>
         </div>
-    </div>
+        
 {% endblock %}

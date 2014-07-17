@@ -39,33 +39,165 @@ title: geom_line
         </ul>
     </div>
 
-    <div class="row">
-        <h2>Examples</h2>
-        <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/geom_line/example1.png">
-            </div>
-        </div>
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">ggplot(mtcars, aes('wt', 'mpg')) + \
+    geom_line()
+</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_line.py_example_0.png">
             </div>
         </div>
+        
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">ggplot(mtcars, aes('wt', 'mpg', 'qsec')) + \
+    geom_line()
+</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_line.py_example_1.png">
             </div>
         </div>
-    </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(mtcars, aes(x='wt', y='mpg', size='qsec')) + \
+    geom_line()
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_line.py_example_2.png">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(mtcars, aes(x='wt', y='mpg', color='qsec')) + \
+    geom_line() +\
+    scale_colour_gradient(low="coral", high="steelblue")
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_line.py_example_3.png">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(mtcars, aes(x='wt', y='mpg')) + \
+    geom_line(color='steelblue', size=100)
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_line.py_example_4.png">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(mtcars, aes(x='wt', y='mpg')) +\
+    geom_line(colour="black", size = 100) +\
+    geom_line(colour="pink", size = 40)
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_line.py_example_5.png">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(mtcars, aes(x='wt', y='mpg')) + \
+    geom_line(color='steelblue', size=100, alpha=0.4)
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_line.py_example_6.png">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(diamonds, aes(x='carat', y='price', color='color')) +\
+    geom_line(alpha=0.1)
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_line.py_example_7.png">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(meat, aes(x='date', y='beef')) +\
+    geom_line()
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_line.py_example_8.png">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(pd.melt(meat, id_vars=['date']), aes(x='date', y='value', color='variable')) +\
+    geom_line()
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_line.py_example_9.png">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(pd.melt(meat, id_vars=['date']), aes(x='date', y='value', color='variable')) +\
+    geom_line()
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_line.py_example_10.png">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">movies.rating = movies.rating.round(0)
+movies_by_year = movies.groupby(["year", "rating"]).apply(len).reset_index()
+movies_by_year.columns = ['year', 'rating', 'number']
+ggplot(movies_by_year, aes(x='year', y='number', color='rating')) +\
+    geom_line()
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_line.py_example_11.png">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(movies_by_year, aes(x='year', y='number', color='factor(rating)')) +\
+    geom_line()
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_line.py_example_12.png">
+            </div>
+        </div>
+        
 {% endblock %}

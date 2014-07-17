@@ -1,0 +1,39 @@
+title: scale_x_reverse
+
+{% extends "docpage.html" %}
+{% block body %}
+    <div class="row">
+        <h2>Usage</h2>
+        <pre class="prettyprint">scale_x_reverse(name = ..., breaks = ..., labels = ..., limits = ...)</pre>
+    </div>
+
+    <div class="row">
+        <h2>Arguments</h2>
+        <table class='table table-bordered'>
+            <thead>
+                <th>Name</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>name</td>
+                    <td>Label for x axis.</td>
+                </tr>
+                <tr>
+                    <td>breaks</td>
+                    <td>Points at which x gridlines appear.</td>
+                </tr>
+                <tr>
+                    <td>labels</td>
+                    <td>Labels for x ticks.</td>
+                </tr>
+                <tr>
+                    <td>limits</td>
+                    <td>Where x axis starts/stops.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+{{ EXAMPLES }}
+{% endblock %}

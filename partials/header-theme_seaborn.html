@@ -1,0 +1,35 @@
+title: theme_seaborn
+
+{% extends "docpage.html" %}
+{% block body %}
+    <div class="row">
+        <h2>Usage</h2>
+        <pre class="prettyprint">theme_seaborn()</pre>
+    </div>
+
+    <div class="row">
+        <h2>Arguments</h2>
+        <table class='table table-bordered'>
+            <thead>
+                <th>Name</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>style</td>
+                    <td>Style of axis background. <code>whitegrid</code> | <code>darkgrid</code> | <code>nogrid</code> | <code>ticks</code></td>
+                </tr>
+                <tr>
+                    <td>context</td>
+                    <td>Intended context for resulting figures. <code>notebook</code> | <code>talk</code> | <code>paper</code> | <code>poster</code></td>
+                </tr>
+                <tr>
+                    <td>gridweight</td>
+                    <td> Width of the grid lines. <code>extra heavy</code> | <code>heavy</code> | <code>medium</code> | <code>light</code> | <code>None</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+{{ EXAMPLES }}
+{% endblock %}

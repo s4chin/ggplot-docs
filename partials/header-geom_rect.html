@@ -1,0 +1,46 @@
+title: geom_rect
+
+{% extends "docpage.html" %}
+{% block body %}
+    <div class="row">
+        <h2>Usage</h2>
+        <pre class="prettyprint">geom_rect(position = 'identity', stat = 'identity')</pre>
+    </div>
+
+    <div class="row">
+        <h2>Arguments</h2>
+        <table class='table table-bordered'>
+            <thead>
+                <th>Name</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>position</td>
+                    <td>Position adjustments to points. <code>identity</code></td>
+                </tr>
+                <tr>
+                    <td>stat</td>
+                    <td>he statistical transformation to use on the data for this layer. <code>identity</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <h2>Aesthetics</h2>
+        <ul>
+            <li>xmin</li>
+            <li>xmax</li>
+            <li>ymin</li>
+            <li>ymax</li>
+            <li>alpha</li>
+            <li>colour</li>
+            <li>fill</li>
+            <li>linetype</li>
+            <li>size</li>
+        </ul>
+    </div>
+
+{{ EXAMPLES }}
+{% endblock %}

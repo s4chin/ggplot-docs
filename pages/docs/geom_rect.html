@@ -42,33 +42,23 @@ title: geom_rect
         </ul>
     </div>
 
-    <div class="row">
-        <h2>Examples</h2>
-        <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
-            </div>
-        </div>
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
-            </div>
-        </div>
+                <pre class="prettyprint">import pandas as pd
+import numpy as np
 
-        <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+df = pd.DataFrame({
+    "x": np.random.choice(range(10), 20),
+    "y": np.random.choice(range(10), 20)
+})
+ggplot(df, aes(xmin='x', xmax='x+1', ymin='y', ymax='y+2')) +\
+    geom_rect()
+</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_rect.py_example_0.png">
             </div>
         </div>
-    </div>
+        
 {% endblock %}

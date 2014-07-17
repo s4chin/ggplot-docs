@@ -41,33 +41,29 @@ title: geom_area
         </ul>
     </div>
 
-    <div class="row">
-        <h2>Examples</h2>
-        <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
-            </div>
-        </div>
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">ggplot(aes(x='date', ymin='beef - 1000', ymax='beef + 1000'), data=meat) + \
+    geom_area()
+</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_area.py_example_0.png">
             </div>
         </div>
+        
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">ggplot(aes(x='date', y='beef', ymin='beef - 1000', ymax='beef + 1000'), data=meat) + \
+    geom_area() + \
+    geom_point(color='coral')
+</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_area.py_example_1.png">
             </div>
         </div>
-    </div>
+        
 {% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+        <h2>Usage</h2>
+        <pre class="prettyprint">stat_function(fun=lambda x:x**2 + 18)</pre>
+    </div>
+
+    <div class="row">
+        <h2>Arguments</h2>
+        <table class='table table-bordered'>
+            <thead>
+                <th>Name</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>fun</td>
+                    <td>callable function to plot</td>
+                </tr>
+                <tr>
+                    <td>args</td>
+                    <td>Additional arguments to be passed to <code>fun</code>. May be <code>list</code> or <code>dict</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <h2>Aesthetics</h2>
+        <ul>
+            <li>x</li>
+            <li>y</li>
+            <li>size</li>
+            <li>shape</li>
+            <li>color</li>
+            <li>alpha</li>
+        </ul>
+    </div>
+
+{{ EXAMPLES }}
+{% endblock %}

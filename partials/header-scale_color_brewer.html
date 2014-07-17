@@ -1,0 +1,32 @@
+title: scale_color_brewer
+
+{% extends "docpage.html" %}
+{% block body %}
+    <div class="row">
+        <h2>Usage</h2>
+        <pre class="prettyprint">scale_color_brewer(type = 'seq', palette = 1)</pre>
+        <pre class="prettyprint">scale_color_brewer(type = 'seq', palette = 'GnBu')</pre>
+    </div>
+
+    <div class="row">
+        <h2>Arguments</h2>
+        <table class='table table-bordered'>
+            <thead>
+                <th>Name</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>type</td>
+                    <td>Class of variable being used for color. Sequential (seq) | Qualitative (qual) | Diverging (div)</td>
+                </tr>
+                <tr>
+                    <td>palette</td>
+                    <td>Color combination to use. Can be either an integer or the name of a palette. See <a href="http://colorbrewer2.org/">http://colorbrewer2.org/</a> for more details.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+{{ EXAMPLES }}
+{% endblock %}

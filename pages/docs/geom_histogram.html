@@ -40,33 +40,123 @@ title: geom_histogram
         </ul>
     </div>
 
-    <div class="row">
-        <h2>Examples</h2>
-        <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
-            </div>
-        </div>
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">ggplot(aes(x='pageviews'), data=pageviews) + \
+    geom_histogram()
+</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_histogram.py_example_0.png">
             </div>
         </div>
+        
 
         <div class="row">
             <div class="col-sm-6">
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">ggplot(aes(x='pageviews'), data=pageviews) + \
+    geom_histogram(binwidth=50)
+</pre>
             </div>
             <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/docs/facet_grid/example1.png">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_histogram.py_example_1.png">
             </div>
         </div>
-    </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(aes(x='pageviews'), data=pageviews) + \
+    geom_histogram(binwidth=1000)
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_histogram.py_example_2.png">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">import pandas as pd
+import numpy as np
+
+df = pd.DataFrame({
+    "x": np.random.normal(0, 10, 1000),
+    "y": np.random.normal(0, 10, 1000),
+    "z": np.random.normal(0, 10, 1000)
+})
+df = pd.melt(df)
+
+ggplot(aes(x='value', color='variable'), data=df) + \
+    geom_histogram()
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_histogram.py_example_3.png">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(aes(x='value', fill='variable', color='variable'), data=df) + \
+    geom_histogram(alpha=0.6)
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_histogram.py_example_4.png">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(movies, aes(x='rating')) + \
+    geom_histogram()
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_histogram.py_example_5.png">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(movies, aes(x='rating', weight='votes')) + \
+    geom_histogram()
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_histogram.py_example_6.png">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">ggplot(movies[movies.mpaa.isnull()==False], aes(x='rating', color='mpaa')) + \
+    geom_density()
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_histogram.py_example_7.png">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <pre class="prettyprint">movies['decade'] = movies.year.round(-1)
+ggplot(movies, aes(x='rating', colour='factor(decade)')) + \
+    geom_histogram()
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ STATIC_URL }}/img/newdocs/geom_histogram.py_example_8.png">
+            </div>
+        </div>
+        
 {% endblock %}

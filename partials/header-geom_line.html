@@ -1,0 +1,43 @@
+title: geom_line
+
+{% extends "docpage.html" %}
+{% block body %}
+    <div class="row">
+        <h2>Usage</h2>
+        <pre class="prettyprint">geom_line(position = 'jitter')</pre>
+    </div>
+
+    <div class="row">
+        <h2>Arguments</h2>
+        <table class='table table-bordered'>
+            <thead>
+                <th>Name</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>position</td>
+                    <td>Position adjustments to points. <code>jitter</code></td>
+                </tr>
+                <tr>
+                    <td>stat</td>
+                    <td>The statistical transformation to use on the data for this layer. <code>identity</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <h2>Aesthetics</h2>
+        <ul>
+            <li>x</li>
+            <li>y</li>
+            <li>alpha</li>
+            <li>colour</li>
+            <li>linetype</li>
+            <li>size</li>
+        </ul>
+    </div>
+
+{{ EXAMPLES }}
+{% endblock %}
