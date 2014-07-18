@@ -43,20 +43,15 @@ title: geom_density
 
 
         <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint">ggplot(aes(x='pageviews'), data=pageviews) + \
+            <pre class="prettyprint">ggplot(aes(x='pageviews'), data=pageviews) + \
     geom_density()
 </pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/newdocs/geom_density.py_example_0.png">
-            </div>
+            <img src="{{ STATIC_URL }}/img/newdocs/geom_density.py_example_0.png">
         </div>
         
 
         <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint">import pandas as pd
+            <pre class="prettyprint">import pandas as pd
 import numpy as np
 
 df = pd.DataFrame({
@@ -69,59 +64,40 @@ df = pd.melt(df)
 ggplot(aes(x='value', color='variable'), data=df) + \
     geom_density()
 </pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/newdocs/geom_density.py_example_1.png">
-            </div>
+            <img src="{{ STATIC_URL }}/img/newdocs/geom_density.py_example_1.png">
         </div>
         
 
         <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint">ggplot(aes(x='value', color='variable', fill='variable'), data=df) + \
+            <pre class="prettyprint">ggplot(aes(x='value', color='variable', fill='variable'), data=df) + \
     geom_density(alpha=0.6)
 </pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/newdocs/geom_density.py_example_2.png">
-            </div>
+            <img src="{{ STATIC_URL }}/img/newdocs/geom_density.py_example_2.png">
         </div>
         
 
         <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint">ggplot(movies, aes(x='rating')) + \
+            <pre class="prettyprint">ggplot(movies, aes(x='rating')) + \
     geom_density()
 </pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/newdocs/geom_density.py_example_3.png">
-            </div>
+            <img src="{{ STATIC_URL }}/img/newdocs/geom_density.py_example_3.png">
         </div>
         
 
         <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint">ggplot(movies[movies.mpaa.isnull()==False], aes(x='rating', color='mpaa')) + \
+            <pre class="prettyprint">ggplot(movies[movies.mpaa.isnull()==False], aes(x='rating', color='mpaa')) + \
     geom_density()
 </pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/newdocs/geom_density.py_example_4.png">
-            </div>
+            <img src="{{ STATIC_URL }}/img/newdocs/geom_density.py_example_4.png">
         </div>
         
 
         <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint">movies['decade'] = movies.year.round(-1)
+            <pre class="prettyprint">movies['decade'] = movies.year.round(-1)
 ggplot(movies, aes(x='rating', colour='factor(decade)')) + \
     geom_density()
 </pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/newdocs/geom_density.py_example_5.png">
-            </div>
+            <img src="{{ STATIC_URL }}/img/newdocs/geom_density.py_example_5.png">
         </div>
         
 {% endblock %}

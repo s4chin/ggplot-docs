@@ -15,12 +15,8 @@ for f in os.listdir(dirname):
         code = code.strip().strip("#")
         template = """
         <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint">{code}</pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{STATIC_URL}/img/newdocs/{f}_example_{i}.png">
-            </div>
+            <pre class="prettyprint">{code}</pre>
+            <img src="{STATIC_URL}/img/newdocs/{f}_example_{i}.png">
         </div>
         """
         template = template.format(code=code, f=f, i=i, STATIC_URL="{{ STATIC_URL }}")

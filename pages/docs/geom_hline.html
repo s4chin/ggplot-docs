@@ -39,43 +39,31 @@ title: geom_hline
 
 
         <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint">ggplot(aes(x='date_hour', y='pageviews'), data=pageviews) + \
+            <pre class="prettyprint">ggplot(aes(x='date_hour', y='pageviews'), data=pageviews) + \
     geom_point() +\
     geom_hline(yintercept=[10000])
 </pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/newdocs/geom_hline.py_example_0.png">
-            </div>
+            <img src="{{ STATIC_URL }}/img/newdocs/geom_hline.py_example_0.png">
         </div>
         
 
         <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint">ggplot(aes(x='date_hour', y='pageviews'), data=pageviews) + \
+            <pre class="prettyprint">ggplot(aes(x='date_hour', y='pageviews'), data=pageviews) + \
     geom_point() +\
     geom_hline(yintercept=range(5000, 20000, 5000), color='coral', size=5)
 </pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/newdocs/geom_hline.py_example_1.png">
-            </div>
+            <img src="{{ STATIC_URL }}/img/newdocs/geom_hline.py_example_1.png">
         </div>
         
 
         <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint">ggplot(meat, aes(x='date', y='beef')) +\
+            <pre class="prettyprint">ggplot(meat, aes(x='date', y='beef')) +\
     geom_line() +\
     geom_hline(yintercept=2500, color='red') +\
     geom_hline(yintercept=2000, color='yellow') +\
     geom_hline(yintercept=1500, color='green')
 </pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/newdocs/geom_hline.py_example_2.png">
-            </div>
+            <img src="{{ STATIC_URL }}/img/newdocs/geom_hline.py_example_2.png">
         </div>
         
 {% endblock %}

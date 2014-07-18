@@ -42,8 +42,7 @@ title: geom_step
 
 
         <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint">import numpy as np
+            <pre class="prettyprint">import numpy as np
 import pandas as pd
 
 df = pd.DataFrame({
@@ -55,22 +54,15 @@ df.y = df.y.cumsum()
 ggplot(df, aes(x='x', y='y')) +\
     geom_point()
 </pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/newdocs/geom_step.py_example_0.png">
-            </div>
+            <img src="{{ STATIC_URL }}/img/newdocs/geom_step.py_example_0.png">
         </div>
         
 
         <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint">ggplot(df, aes(x='x', y='y')) +\
+            <pre class="prettyprint">ggplot(df, aes(x='x', y='y')) +\
     geom_step()
 </pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/newdocs/geom_step.py_example_1.png">
-            </div>
+            <img src="{{ STATIC_URL }}/img/newdocs/geom_step.py_example_1.png">
         </div>
         
 {% endblock %}

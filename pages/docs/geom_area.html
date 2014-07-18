@@ -43,27 +43,19 @@ title: geom_area
 
 
         <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint">ggplot(aes(x='date', ymin='beef - 1000', ymax='beef + 1000'), data=meat) + \
+            <pre class="prettyprint">ggplot(aes(x='date', ymin='beef - 1000', ymax='beef + 1000'), data=meat) + \
     geom_area()
 </pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/newdocs/geom_area.py_example_0.png">
-            </div>
+            <img src="{{ STATIC_URL }}/img/newdocs/geom_area.py_example_0.png">
         </div>
         
 
         <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint">ggplot(aes(x='date', y='beef', ymin='beef - 1000', ymax='beef + 1000'), data=meat) + \
+            <pre class="prettyprint">ggplot(aes(x='date', y='beef', ymin='beef - 1000', ymax='beef + 1000'), data=meat) + \
     geom_area() + \
     geom_point(color='coral')
 </pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/newdocs/geom_area.py_example_1.png">
-            </div>
+            <img src="{{ STATIC_URL }}/img/newdocs/geom_area.py_example_1.png">
         </div>
         
 {% endblock %}

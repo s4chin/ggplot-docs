@@ -1,5 +1,7 @@
-{% extends "base.html" %}
-{% block content %}
+title: geom_abline
+
+{% extends "docpage.html" %}
+{% block body %}
     <div class="row">
         <h2>Usage</h2>
         <pre class="prettyprint">geom_abline(intercept = 15, slope = -1.5)</pre>
@@ -42,29 +44,21 @@
 
 
         <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint">ggplot(mtcars,aes(x='wt',y='mpg')) + \
+            <pre class="prettyprint">ggplot(mtcars,aes(x='wt',y='mpg')) + \
     geom_point() + \
     geom_abline(intercept=20)
 </pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/newdocs/geom_abline.py_example_0.png">
-            </div>
+            <img src="{{ STATIC_URL }}/img/newdocs/geom_abline.py_example_0.png">
         </div>
         
 
         <div class="row">
-            <div class="col-sm-6">
-                <pre class="prettyprint">ggplot(mtcars,aes(x='wt',y='mpg')) + \
+            <pre class="prettyprint">ggplot(mtcars,aes(x='wt',y='mpg')) + \
     geom_point() + \
     geom_abline(intercept=37,slope=-5,
                 colour="red",size=10)
 </pre>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ STATIC_URL }}/img/newdocs/geom_abline.py_example_1.png">
-            </div>
+            <img src="{{ STATIC_URL }}/img/newdocs/geom_abline.py_example_1.png">
         </div>
         
 {% endblock %}
